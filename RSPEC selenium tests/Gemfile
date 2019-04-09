@@ -1,0 +1,12 @@
+source 'https://rubygems.org/'
+
+
+gem 'cucumber'
+gem 'minitest'
+gem 'pry'
+gem 'selenium-webdriver'
+gem 'rspec'
+gem 'ffi', '~> 1.9', '>= 1.9.25'
+# Gemfile
+source "https://rubygems.org"
+gem 'rspec-expectations'

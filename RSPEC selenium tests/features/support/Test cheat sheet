@@ -1,0 +1,47 @@
+driver.find_element(:name, "employeeId").send_keys("61509") -- this will find and element and input text in the fields
+
+driver.find_element(:css, "ch-btn.ch-btn--block.ch-btn--success").click  - this will find A button and click it
+
+driver.get("http://arnoldclarkemployee.com")    - this directs a user to the URL 
+
+#click 
+driver.find_element(:link, "Tips & Tricks").click
+
+#type
+driver.find_element(:id, "s").clear
+driver.find_element(:id, "s").send_keys "appium"
+
+#select 
+options=select_list.find_elements(:tag_name => "option")
+# Select the option "Volvo"
+options.each do |g|
+  if g.text == "aDropDownElement"
+  g.click
+  break
+  end
+end
+
+#Verify element is present 
+verify { assert element_present?(:css, "td.table5 > span.style1") }
+
+
+#Wait for element present
+assert !60.times{ break if (element_present?(:css, "anElement") rescue false); sleep 1 }
+
+chkbox = browser.find_element(:name, "checkthebox")
+ 
+# Check that the checkbox exists
+chkbox = wait.until {
+    element = browser.find_element(:name, "checkthebox")
+    element if element.displayed?
+}
+puts "Test Passed: The check box exists" if cb
+Check the checkbox
+chkbox.click
+
+driver.find_element(:class, 'ac-searchtag').text
+    puts "test passed" if text == "Audi"
+
+raise "URL NOT AS EXPECTED" if url != "https://www.arnoldclark.com/used-cars/search?utf8=%E2%9C%93&make=Audi&model=&payment_type=monthly&min_price=&max_price="
+     the above will assert that the above will be printed to the console if the url is not what is stated
+     
